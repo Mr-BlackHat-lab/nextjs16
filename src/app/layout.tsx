@@ -14,10 +14,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`antialiased`}
-      >
+      <body>
+        <header
+         style={{backgroundColor: "lightblue",
+          padding: "16px"
+         }}>
+          <p>
+          header
+          </p>
+        </header>
         {children}
+        <footer
+         style={{backgroundColor: "ghostwhite",
+          padding: "16px"
+         }}>
+          <p>
+          Footer
+          </p>
+        </footer>
       </body>
     </html>
   );
