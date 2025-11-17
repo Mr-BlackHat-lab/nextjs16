@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 
-
-
 export const metadata: Metadata = {
-  title: "learner",
+  title: {
+    default: "learner",
+    template: "%s | learner",
+  },
   description: "nextjs 16 learning project",
 };
 
@@ -15,22 +16,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header
-         style={{backgroundColor: "lightblue",
-          padding: "16px"
-         }}>
-          <p>
-          header
-          </p>
+        <header style={{ backgroundColor: "lightblue", padding: "16px" }}>
+          <p>header</p>
         </header>
         {children}
-        <footer
-         style={{backgroundColor: "ghostwhite",
-          padding: "16px"
-         }}>
-          <p>
-          Footer
-          </p>
+        <footer style={{ backgroundColor: "ghostwhite", padding: "16px" }}>
+          <p>Footer</p>
         </footer>
       </body>
     </html>
