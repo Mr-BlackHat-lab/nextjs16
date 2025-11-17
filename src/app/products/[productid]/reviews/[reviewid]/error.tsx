@@ -1,9 +1,33 @@
 "use client";
+<<<<<<< HEAD
 export default function ErrorBoundary({ error }: { error: Error }) {
   return (
     <div>
       <h1>{error.message}</h1>
       {/*<h1>Error in review id (randomly gentrated error)</h1>*/}
+=======
+import { useRouter } from "next/navigation";
+import { startTransition } from "react";
+export default function ErrorBoundary({
+  error,
+  reset,
+}: {
+  error: Error;
+  reset: () => void;
+}) {
+  const router = useRouter();
+  const reload = () => {
+    startTransition(() => {
+      router.refresh();
+      reset();
+    });
+  };
+  return (
+    <div>
+      <h1>{error.message}</h1>
+      <button onClick={() => reload()}>Try again</button>
+      <h1>Error in review id (randomly gentrated error)</h1>
+>>>>>>> 2033a75 (recovering from error)
     </div>
   );
 }
