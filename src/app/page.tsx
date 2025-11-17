@@ -6,6 +6,12 @@ export default function Home() {
       <Link href="/blog">Blog</Link>
       <Link href="/products">Product</Link>
       <Link href="/about">About</Link>
+      <Link href="/articles/breaking-news-iphone-17?lang=en">
+        Read News in english
+      </Link>
+      <Link href="/articles/breaking-news-iphone-17?lang=fr">
+        Read News in french
+      </Link>
     </>
   );
 }
