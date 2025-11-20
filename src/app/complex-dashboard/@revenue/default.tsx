@@ -1,5 +1,4 @@
-import { notFound } from "next/navigation";
-
-export default function Default() {
-  return notFound();
+import { Card } from "@/components/card";
+export default function RevenuePage() {
+  return <Card>Revenue page</Card>;
 }
